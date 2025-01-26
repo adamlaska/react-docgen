@@ -1,0 +1,156 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`main > Class definition > parses with custom handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+  },
+]
+`;
+
+exports[`main > Class definition > parses with default resolver/handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+    "displayName": "ABC",
+    "methods": [],
+    "props": {
+      "foo": {
+        "defaultValue": {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Example prop description",
+        "required": false,
+        "type": {
+          "name": "bool",
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`main > React.createClass > parses with custom handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+  },
+]
+`;
+
+exports[`main > React.createClass > parses with default resolver/handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+    "displayName": "ABC",
+    "methods": [],
+    "props": {
+      "foo": {
+        "defaultValue": {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Example prop description",
+        "required": false,
+        "type": {
+          "name": "bool",
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`main > Stateless Component definition: ArrowFunctionExpression > parses with custom handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+  },
+]
+`;
+
+exports[`main > Stateless Component definition: ArrowFunctionExpression > parses with default resolver/handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+    "displayName": "ABC",
+    "methods": [],
+    "props": {
+      "foo": {
+        "defaultValue": {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Example prop description",
+        "required": false,
+        "type": {
+          "name": "bool",
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`main > Stateless Component definition: FunctionDeclaration > parses with custom handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+  },
+]
+`;
+
+exports[`main > Stateless Component definition: FunctionDeclaration > parses with default resolver/handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+    "displayName": "ABC",
+    "methods": [],
+    "props": {
+      "foo": {
+        "defaultValue": {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Example prop description",
+        "required": false,
+        "type": {
+          "name": "bool",
+        },
+      },
+    },
+  },
+]
+`;
+
+exports[`main > Stateless Component definition: FunctionExpression > parses with custom handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+  },
+]
+`;
+
+exports[`main > Stateless Component definition: FunctionExpression > parses with default resolver/handlers 1`] = `
+[
+  {
+    "description": "Example component description",
+    "displayName": "ABC",
+    "methods": [],
+    "props": {
+      "foo": {
+        "defaultValue": {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Example prop description",
+        "required": false,
+        "type": {
+          "name": "bool",
+        },
+      },
+    },
+  },
+]
+`;

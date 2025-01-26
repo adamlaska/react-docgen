@@ -1,0 +1,70 @@
+import { Tabs } from 'nextra/components';
+
+# Node.js
+
+## Install
+
+Install the module with your favorite package manager:
+
+<Tabs items={["npm", "pnpm", "yarn"]}>
+  <Tabs.Tab>
+
+```shell filename="Terminal" copy
+npm install --save react-docgen
+```
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+
+```shell filename="Terminal" copy
+pnpm add react-docgen
+```
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+
+```shell filename="Terminal" copy
+yarn add react-docgen
+```
+
+  </Tabs.Tab>
+</Tabs>
+
+## Usage
+
+Here is a basic example
+
+```ts filename="index.tsx" copy
+import { parse } from 'react-docgen';
+
+const code = `
+/** My first component */
+export default ({ name }: { name: string }) => <div>{{name}}</div>;
+`;
+
+const documentation = parse(code);
+
+console.log(documentation);
+```
+
+The documentation that this script is going to print will look like this. If you
+want to know more about the structure you can head over to the reference of the
+[Documentation](../reference/documentation/basic.mdx)
+
+```json
+[
+  {
+    "description": "My first component",
+    "methods": [],
+    "props": {
+      "name": {
+        "required": true,
+        "tsType": {
+          "name": "string"
+        },
+        "description": ""
+      }
+    }
+  }
+]
+```

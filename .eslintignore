@@ -1,5 +1,4 @@
-benchmark/fixtures/
-dist/
-src/__tests__/fixtures/
-website/node_modules
-website/dist/
+benchmark/suites/
+**/__fixtures__/
+**/dist/
+**/node_modules

@@ -1,3 +1,5 @@
-src/__tests__/fixtures/
-benchmark/fixtures/
-dist/
+benchmark/suites/
+**/__fixtures__/
+**/dist/
+**/node_modules
+/.nx/cache

@@ -1,0 +1,32 @@
+---
+title: 'react-docgen – React documentation generator'
+---
+
+import { Callout } from 'nextra/components';
+
+# Document React \<components /\> in JSON format
+
+<br />
+<br />
+
+`react-docgen` is a highly customizable library that extracts information from
+[React](https://reactjs.org/) components and returns this information in a
+structured machine-readable format from which documentation can be generated.
+
+It uses [Babel](https://babel.dev/) to parse the source into an AST and provides
+methods to process this AST to extract the desired information. The output /
+return value is a JSON blob / JavaScript object.
+
+It provides a default implementation for React components defined via
+`React.createClass`, [ES2015 class definitions][classes] or functions (stateless
+components).
+
+<Callout type="info" emoji="">
+  react-docgen is a low-level tool to extract information about react
+  components. If you are searching for a full-fledged style guide with an actual
+  interface check out some of the tools that are using `react-docgen`. You can
+  find a list of tools on [this page](./users.mdx)
+</Callout>
+
+[classes]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes

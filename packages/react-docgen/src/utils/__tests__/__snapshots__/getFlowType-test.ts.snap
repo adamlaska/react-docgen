@@ -1,0 +1,222 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getFlowType > detects object types with descriptions 1`] = `
+{
+  "name": "signature",
+  "raw": "{
+  /** A */
+  a: string,
+  /** B */
+  b?: xyz
+}",
+  "signature": {
+    "properties": [
+      {
+        "description": "A",
+        "key": "a",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "description": "B",
+        "key": "b",
+        "value": {
+          "name": "xyz",
+          "required": false,
+        },
+      },
+    ],
+  },
+  "type": "object",
+}
+`;
+
+exports[`getFlowType > detects object types with maybe type 1`] = `
+{
+  "name": "signature",
+  "raw": "{ a: string, b: ?xyz }",
+  "signature": {
+    "properties": [
+      {
+        "key": "a",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "b",
+        "value": {
+          "name": "xyz",
+          "nullable": true,
+          "required": true,
+        },
+      },
+    ],
+  },
+  "type": "object",
+}
+`;
+
+exports[`getFlowType > handles ObjectTypeSpreadProperty 1`] = `
+{
+  "name": "signature",
+  "raw": "{| apple: string, banana: string, ...OtherFruits |}",
+  "signature": {
+    "properties": [
+      {
+        "key": "apple",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "banana",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "orange",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+    ],
+  },
+  "type": "object",
+}
+`;
+
+exports[`getFlowType > handles ObjectTypeSpreadProperty from imported types 1`] = `
+{
+  "name": "signature",
+  "raw": "{| apple: string, banana: string, ...MyType |}",
+  "signature": {
+    "properties": [
+      {
+        "key": "apple",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "banana",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "a",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "b",
+        "value": {
+          "name": "notImported",
+          "nullable": true,
+          "required": true,
+        },
+      },
+    ],
+  },
+  "type": "object",
+}
+`;
+
+exports[`getFlowType > handles indexed access on alias 1`] = `
+{
+  "name": "string",
+  "raw": "A[\\"x\\"]",
+}
+`;
+
+exports[`getFlowType > handles indexed access on interface 1`] = `
+{
+  "name": "A[\\"x\\"]",
+  "raw": "A[\\"x\\"]",
+}
+`;
+
+exports[`getFlowType > handles nested ObjectTypeSpreadProperty 1`] = `
+{
+  "name": "signature",
+  "raw": "{| apple: string, banana: string, ...BreakfastFruits |}",
+  "signature": {
+    "properties": [
+      {
+        "key": "apple",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "banana",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "mango",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "orange",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "lemon",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+    ],
+  },
+  "type": "object",
+}
+`;
+
+exports[`getFlowType > handles unresolved ObjectTypeSpreadProperty 1`] = `
+{
+  "name": "signature",
+  "raw": "{| apple: string, banana: string, ...MyType |}",
+  "signature": {
+    "properties": [
+      {
+        "key": "apple",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+      {
+        "key": "banana",
+        "value": {
+          "name": "string",
+          "required": true,
+        },
+      },
+    ],
+  },
+  "type": "object",
+}
+`;

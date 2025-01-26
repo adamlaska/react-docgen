@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`resolveGenericTypeAnnotation > resolves type 1`] = `
+Node {
+  "callProperties": [],
+  "exact": false,
+  "indexers": [],
+  "inexact": false,
+  "internalSlots": [],
+  "properties": [
+    Node {
+      "key": Node {
+        "name": "x",
+        "type": "Identifier",
+      },
+      "kind": "init",
+      "method": false,
+      "optional": false,
+      "proto": false,
+      "static": false,
+      "type": "ObjectTypeProperty",
+      "value": Node {
+        "type": "StringTypeAnnotation",
+      },
+      "variance": null,
+    },
+  ],
+  "type": "ObjectTypeAnnotation",
+}
+`;

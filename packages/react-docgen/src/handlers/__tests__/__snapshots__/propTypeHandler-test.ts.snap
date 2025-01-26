@@ -1,0 +1,309 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`propTypeHandler > React.createClass > can resolve individual imported variables assigned to props 1`] = `
+{
+  "@computed#bar": {
+    "required": false,
+    "type": {},
+  },
+  "baz": {
+    "required": false,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+  "foo": {
+    "required": false,
+    "type": {},
+  },
+  "simple_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > React.createClass > handles computed properties 1`] = `
+{
+  "@computed#foo": {
+    "required": true,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > React.createClass > ignores complex computed properties 1`] = `
+{
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > React.createClass > passes the correct argument to getPropType 1`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "bool",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > React.createClass > passes the correct argument to getPropType 2`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "xyz",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > class definition > class property > can resolve individual imported variables assigned to props 1`] = `
+{
+  "@computed#bar": {
+    "required": false,
+    "type": {},
+  },
+  "baz": {
+    "required": false,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+  "foo": {
+    "required": false,
+    "type": {},
+  },
+  "simple_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > class definition > class property > handles computed properties 1`] = `
+{
+  "@computed#foo": {
+    "required": true,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > class definition > class property > ignores complex computed properties 1`] = `
+{
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > class definition > class property > passes the correct argument to getPropType 1`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "bool",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > class definition > class property > passes the correct argument to getPropType 2`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "xyz",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > class definition > static getter > can resolve individual imported variables assigned to props 1`] = `
+{
+  "@computed#bar": {
+    "required": false,
+    "type": {},
+  },
+  "baz": {
+    "required": false,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+  "foo": {
+    "required": false,
+    "type": {},
+  },
+  "simple_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > class definition > static getter > handles computed properties 1`] = `
+{
+  "@computed#foo": {
+    "required": true,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > class definition > static getter > ignores complex computed properties 1`] = `
+{
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > class definition > static getter > passes the correct argument to getPropType 1`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "bool",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > class definition > static getter > passes the correct argument to getPropType 2`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "xyz",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > stateless component > can resolve individual imported variables assigned to props 1`] = `
+{
+  "@computed#bar": {
+    "required": false,
+    "type": {},
+  },
+  "baz": {
+    "required": false,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+  "foo": {
+    "required": false,
+    "type": {},
+  },
+  "simple_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > stateless component > handles computed properties 1`] = `
+{
+  "@computed#foo": {
+    "required": true,
+    "type": {},
+  },
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > stateless component > ignores complex computed properties 1`] = `
+{
+  "complex_prop": {
+    "required": true,
+    "type": {},
+  },
+}
+`;
+
+exports[`propTypeHandler > stateless component > passes the correct argument to getPropType 1`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "bool",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;
+
+exports[`propTypeHandler > stateless component > passes the correct argument to getPropType 2`] = `
+Node {
+  "computed": false,
+  "object": Node {
+    "name": "PropTypes",
+    "type": "Identifier",
+  },
+  "property": Node {
+    "name": "xyz",
+    "type": "Identifier",
+  },
+  "type": "MemberExpression",
+}
+`;

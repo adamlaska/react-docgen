@@ -1,0 +1,67 @@
+# defaultPropsHandler
+
+Finds the default props from the react component and adds it to the
+documentation. Supported variants are:
+
+- The static property named `defaultProps` in Class components
+- Assignment of the static property `defaultProps` on Class or Function
+  components
+- Default values in destructuring the prop argument in Function components
+
+## Examples
+
+When the `defaultPropsHandler` is active any of these components will result in
+the output below
+
+```ts {2-4} filename="component.tsx"
+class MyComponent extends React.Component {
+  static defaultProps = {
+    a: '1',
+  };
+  render() {
+    return <div />;
+  }
+}
+```
+
+```ts {7-9} filename="component.tsx"
+class MyComponent extends React.Component {
+  render() {
+    return <div />;
+  }
+}
+
+MyComponent.defaultProps = {
+  a: '1',
+};
+```
+
+```ts {3-5} filename="component.tsx"
+const MyComponent = () => <div />;
+
+MyComponent.defaultProps = {
+  a: '1',
+};
+```
+
+```ts /{ a = '1' }/ filename="component.tsx"
+({ a = '1' }) => <div />;
+```
+
+## Output
+
+```json {5-9} filename="JSON"
+[
+  {
+    "props": {
+      "a": {
+        "defaultValue": {
+          "value": "'1'",
+          "computed": false
+        },
+        "required": false
+      }
+    }
+  }
+]
+```

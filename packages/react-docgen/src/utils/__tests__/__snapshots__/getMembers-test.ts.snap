@@ -1,0 +1,173 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getMembers > does work with custom expressions in arguments 1`] = `
+[
+  {
+    "argumentPaths": [
+      Node {
+        "left": Node {
+          "extra": {
+            "raw": "123",
+            "rawValue": 123,
+          },
+          "type": "NumericLiteral",
+          "value": 123,
+        },
+        "operator": "+",
+        "right": Node {
+          "extra": {
+            "raw": "123",
+            "rawValue": 123,
+          },
+          "type": "NumericLiteral",
+          "value": 123,
+        },
+        "type": "BinaryExpression",
+      },
+    ],
+    "computed": false,
+    "path": Node {
+      "name": "bar",
+      "type": "Identifier",
+    },
+  },
+  {
+    "argumentPaths": [],
+    "computed": true,
+    "path": Node {
+      "extra": {
+        "raw": "\\"baz\\"",
+        "rawValue": "baz",
+      },
+      "type": "StringLiteral",
+      "value": "baz",
+    },
+  },
+]
+`;
+
+exports[`getMembers > does work with custom expressions in chain 1`] = `
+[
+  {
+    "argumentPaths": [
+      Node {
+        "extra": {
+          "raw": "123",
+          "rawValue": 123,
+        },
+        "type": "NumericLiteral",
+        "value": 123,
+      },
+    ],
+    "computed": false,
+    "path": Node {
+      "name": "bar",
+      "type": "Identifier",
+    },
+  },
+  {
+    "argumentPaths": [],
+    "computed": true,
+    "path": Node {
+      "left": Node {
+        "extra": {
+          "raw": "\\"\\"",
+          "rawValue": "",
+        },
+        "type": "StringLiteral",
+        "value": "",
+      },
+      "operator": "+",
+      "right": Node {
+        "extra": {
+          "raw": "\\"\\"",
+          "rawValue": "",
+        },
+        "type": "StringLiteral",
+        "value": "",
+      },
+      "type": "BinaryExpression",
+    },
+  },
+]
+`;
+
+exports[`getMembers > finds all "members" "inside" a MemberExpression 1`] = `
+[
+  {
+    "argumentPaths": [
+      Node {
+        "extra": {
+          "raw": "123",
+          "rawValue": 123,
+        },
+        "type": "NumericLiteral",
+        "value": 123,
+      },
+    ],
+    "computed": false,
+    "path": Node {
+      "name": "bar",
+      "type": "Identifier",
+    },
+  },
+  {
+    "argumentPaths": [],
+    "computed": true,
+    "path": Node {
+      "name": "baz",
+      "type": "Identifier",
+    },
+  },
+  {
+    "argumentPaths": [],
+    "computed": true,
+    "path": Node {
+      "extra": {
+        "raw": "42",
+        "rawValue": 42,
+      },
+      "type": "NumericLiteral",
+      "value": 42,
+    },
+  },
+]
+`;
+
+exports[`getMembers > includes the root if option set to true 1`] = `
+[
+  {
+    "argumentPaths": [],
+    "computed": false,
+    "path": Node {
+      "name": "foo",
+      "type": "Identifier",
+    },
+  },
+  {
+    "argumentPaths": [
+      Node {
+        "extra": {
+          "raw": "123",
+          "rawValue": 123,
+        },
+        "type": "NumericLiteral",
+        "value": 123,
+      },
+    ],
+    "computed": false,
+    "path": Node {
+      "name": "bar",
+      "type": "Identifier",
+    },
+  },
+  {
+    "argumentPaths": [],
+    "computed": true,
+    "path": Node {
+      "name": "baz",
+      "type": "Identifier",
+    },
+  },
+]
+`;

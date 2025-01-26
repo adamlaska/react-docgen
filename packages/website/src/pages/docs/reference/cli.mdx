@@ -1,0 +1,168 @@
+# Command Line Interface (CLI) Reference
+
+This is the complete reference of all available options for the CLI. A basic
+getting started guide can be found on [this page](../getting-started/cli).
+
+## Arguments
+
+### globs
+
+Specify at least one glob pattern which will be used to search for files.
+
+```shell filename="Examples"
+react-docgen ./src/components/Button.tsx
+
+# All .ts or .tsx files in src/ or any .js files in components/
+react-docgen "src/**/*.ts?(x) components/**/*.js"
+```
+
+If you want to know more about glob patterns, check the documentation of
+[`fast-glob` ↗](https://github.com/mrmlnc/fast-glob#pattern-syntax)
+
+## Options
+
+### `--failOnWarning`
+
+**Default**: `false`
+
+Normally the CLI will not fail the process when warnings occur in _react-docgen_
+and instead, print them to `stderr`. When this option is specified the CLI will
+exit with status code `2` on _react-docgen_ warnings. This currently includes
+the following warnings:
+
+- `ERR_REACTDOCGEN_MISSING_DEFINITION`: No suitable component definition found.
+- `ERR_REACTDOCGEN_MULTIPLE_DEFINITIONS`: Multiple exported component
+  definitions found. (This can only happen when using the
+  `findExportedComponentDefinition` resolver)
+
+Any other errors will always make the process exit with status code `1`,
+independent of this option.
+
+### `--handler <handlers>`
+
+**Default**: default handlers specified in
+[react-docgen ↗](https://github.com/reactjs/react-docgen/blob/main/packages/react-docgen/src/config.ts#L50-L62)
+
+Allows to specify the used handlers which extract information from the react
+components.
+
+This option can either be used with a comma-separated list or multiple times
+
+```shell filename="Examples"
+react-docgen --handler "handler1,handler2"
+
+react-docgen --handler handler1 --handler handler2
+```
+
+Possible values are:
+
+#### Built-in handlers
+
+The name of one of the
+[default handlers ↗](https://github.com/reactjs/react-docgen/blob/main/packages/react-docgen/src/config.ts#L50-L62)
+
+#### Path to handler
+
+A path can be specified to your handler. The path can be absolute (recommended)
+or relative and in the later case the path will be resolved from the current
+working directory.
+
+#### Module name of handler
+
+An npm module name can be specified. The default export of this module needs to
+be the handler function.
+
+### `--help`
+
+Displays the help for the command with the current default values.
+
+### `-i, --ignore <globs>`
+
+**Default**: `["**/node_modules/**", "**/__tests__/**", "**/__mocks__/**"]`
+
+Specify glob patterns of path or files, which should not be used to search for
+react components.
+
+### `--importer <importer>`
+
+**Default**: `fsImporter`
+
+Allows to specify the importer to be used when trying to resolve imports in
+files.
+
+Possible values are:
+
+#### Built-in resolvers
+
+- `ignoreImporter` (disable importing)
+- `fsImporter`
+
+#### Path to importer
+
+A path can be specified to your importer. The path can be absolute (recommended)
+or relative and in the later case the path will be resolved from the current
+working directory.
+
+#### Module name of importer
+
+An npm module name can be specified. The default export of this module needs to
+be the importer.
+
+### `--no-default-ignore`
+
+**Default**: `false`
+
+Enabling this option will disable any of the default ignores specified in the
+[`ignore` option](#-i---ignore-globs).
+
+### `-o, --out <file>`
+
+Store extracted information in the specified file instead of printing to
+`stdout`. If the file exists it will be overwritten.
+
+**Examples**
+
+**TODO**
+
+### `--pretty`
+
+**Default**: `false`
+
+This option will make the CLI print the output JSON with proper spacing and
+newlines.
+
+### `--resolver <resolvers>`
+
+**Default**: `["find-exported-component", "find-all-annotated-components"]`
+
+Allows to specify the resolvers that find react components in the code. When
+multiple resolvers are specified they are all executed in order and all found
+components are returned.
+
+This option can either be used with a comma-separated list or multiple times
+
+```shell filename="Examples"
+react-docgen --resolver "find-exported-component,find-all-annotated-components"
+
+react-docgen --resolver find-exported-component --resolver find-all-annotated-components
+```
+
+Possible values are:
+
+#### Built-in resolvers
+
+- `find-all-annotated-components`
+- `find-all-components`
+- `find-all-exported-components`
+- `find-exported-component`
+
+#### Path to resolver
+
+A path can be specified to your resolver. The path can be absolute (recommended)
+or relative and in the later case the path will be resolved from the current
+working directory.
+
+#### Module name of resolver
+
+An npm module name can be specified. The default export of this module needs to
+be an instance of the resolver.

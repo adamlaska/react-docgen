@@ -1,0 +1,310 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`componentMethodsHandler > function components > finds static methods on a component in a variable declaration 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doFoo",
+    "params": [],
+    "returns": null,
+  },
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doBar",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > function components > finds static methods on a component in an assignment 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doFoo",
+    "params": [],
+    "returns": null,
+  },
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doBar",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > function components > finds static methods on a function declaration 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doFoo",
+    "params": [],
+    "returns": null,
+  },
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doBar",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > function components > resolves imported methods assigned on a component in an assignment 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doFoo",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > function components > resolves imported methods assigned to static properties on a component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doFoo",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > function components > resolves imported methods on a function declaration 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "doFoo",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > resolves imported methods assigned to computed properties 1`] = `
+[
+  {
+    "docblock": "The foo method",
+    "modifiers": [],
+    "name": "@computed#foo",
+    "params": [
+      {
+        "name": "bar",
+        "optional": false,
+        "type": {
+          "name": "number",
+        },
+      },
+    ],
+    "returns": {
+      "type": {
+        "name": "number",
+      },
+    },
+  },
+]
+`;
+
+exports[`componentMethodsHandler > should handle and ignore computed methods 1`] = `
+[
+  {
+    "docblock": "The foo method",
+    "modifiers": [],
+    "name": "@computed#foo",
+    "params": [
+      {
+        "name": "bar",
+        "optional": false,
+        "type": {
+          "name": "number",
+        },
+      },
+    ],
+    "returns": {
+      "type": {
+        "name": "number",
+      },
+    },
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > AssignmentExpression and useImperativeHandle 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "other",
+    "params": [],
+    "returns": null,
+  },
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > VariableDeclaration and useImperativeHandle 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [
+      "static",
+    ],
+    "name": "other",
+    "params": [],
+    "returns": null,
+  },
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > assigned ReturnStatement > ArrowFunctionExpression Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > assigned ReturnStatement > FunctionDeclaration Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > assigned ReturnStatement > FunctionExpression Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > direct ObjectExpression > ArrowFunctionExpression Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > direct ObjectExpression > FunctionDeclaration Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > direct ObjectExpression > FunctionExpression Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > regular ReturnStatement > ArrowFunctionExpression Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > regular ReturnStatement > FunctionDeclaration Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;
+
+exports[`componentMethodsHandler > useImperativeHandle > regular ReturnStatement > FunctionExpression Component 1`] = `
+[
+  {
+    "docblock": null,
+    "modifiers": [],
+    "name": "method",
+    "params": [],
+    "returns": null,
+  },
+]
+`;

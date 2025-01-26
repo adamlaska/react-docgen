@@ -1,6 +1,7 @@
-/dist
-node_modules/
+benchmark/suites/
+dist/
+**/node_modules/*
+!**/__fixtures__/**/node_modules/*
 .idea/
 coverage/
-/website/dist
-yarn-error.log
+.nx/cache

@@ -1,0 +1,114 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getMethodDocumentation > name > handles computed method name 1`] = `
+{
+  "docblock": null,
+  "modifiers": [],
+  "name": "@computed#foo",
+  "params": [],
+  "returns": null,
+}
+`;
+
+exports[`getMethodDocumentation > name > ignores complex computed method name 1`] = `null`;
+
+exports[`getMethodDocumentation > parameters > does not add type parameters to alias 1`] = `
+{
+  "docblock": null,
+  "modifiers": [],
+  "name": "foo",
+  "params": [
+    {
+      "name": "bar",
+      "optional": false,
+      "type": {
+        "alias": "Foo",
+        "elements": [
+          {
+            "name": "T",
+          },
+        ],
+        "name": "Foo",
+        "raw": "Foo<T>",
+      },
+    },
+  ],
+  "returns": null,
+}
+`;
+
+exports[`getMethodDocumentation > parameters > extracts flow type info 1`] = `
+{
+  "docblock": null,
+  "modifiers": [],
+  "name": "foo",
+  "params": [
+    {
+      "name": "bar",
+      "optional": false,
+      "type": {
+        "name": "number",
+      },
+    },
+  ],
+  "returns": null,
+}
+`;
+
+exports[`getMethodDocumentation > parameters > extracts flow type info 2`] = `
+{
+  "docblock": null,
+  "modifiers": [],
+  "name": "foo",
+  "params": [
+    {
+      "name": "bar",
+      "optional": false,
+      "type": {
+        "name": "number",
+      },
+    },
+  ],
+  "returns": null,
+}
+`;
+
+exports[`getMethodDocumentation > parameters > extracts flow type info on function assignment 1`] = `
+{
+  "docblock": null,
+  "modifiers": [],
+  "name": "foo",
+  "params": [
+    {
+      "name": "bar",
+      "optional": false,
+      "type": {
+        "name": "number",
+      },
+    },
+  ],
+  "returns": null,
+}
+`;
+
+exports[`getMethodDocumentation > parameters > private > ignores private methods 1`] = `null`;
+
+exports[`getMethodDocumentation > parameters > private > ignores private typescript methods 1`] = `null`;
+
+exports[`getMethodDocumentation > parameters > resolves flow type info on imported functions 1`] = `
+{
+  "docblock": null,
+  "modifiers": [],
+  "name": "foo",
+  "params": [
+    {
+      "name": "bar",
+      "optional": false,
+      "type": {
+        "name": "number",
+      },
+    },
+  ],
+  "returns": null,
+}
+`;
